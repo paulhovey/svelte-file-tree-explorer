@@ -1,6 +1,7 @@
 import FileMenu from './FileMenu.svelte'
 import { DIRECTORY, FILE } from '../src/types.js'
 import { fileCodeO } from 'svelte-awesome/icons'
+import { mount } from "svelte";
 
 // used for the mock data bits
 let countGood = 0
@@ -131,7 +132,7 @@ const icons = extension => {
 // "selected" is the full path+file of the selected file
 const selected = 'dir-with-files-loaded/file-2.css'
 
-const app = new FileMenu({
+const app = mount(FileMenu, {
 	target: document.body,
 	props: {
 		expanded,

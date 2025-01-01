@@ -4,8 +4,14 @@
 	import { createEventDispatcher } from 'svelte'
 	const dispatch = createEventDispatcher()
 	
-	export let opened = false
-	export let directory = ''
+	/**
+	 * @typedef {Object} Props
+	 * @property {boolean} [opened]
+	 * @property {string} [directory]
+	 */
+
+	/** @type {Props} */
+	let { opened = false, directory = '' } = $props();
 </script>
 
 <style>
@@ -22,7 +28,7 @@
 	}
 </style>
 
-<button on:click={ () => dispatch(opened ? 'close' : 'open') }>
+<button onclick={() => dispatch(opened ? 'close' : 'open')}>
 	<Icon data={ opened ? caretDown : caretRight } class="caret" />
 	<Icon data={ opened ? folderOpen : folder } class="folder" />
 	{ directory }

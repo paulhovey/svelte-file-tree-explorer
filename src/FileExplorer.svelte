@@ -1,9 +1,11 @@
 <script>
 	import Tree from './Tree.svelte'
-	export let files = []
-	export let icons
-	export let expanded
-	export let selected
+	let {
+		files = [],
+		icons,
+		expanded,
+		selected
+	} = $props();
 </script>
 
 <style>

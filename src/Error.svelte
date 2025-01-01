@@ -1,7 +1,13 @@
 <script>
 	import Icon from 'svelte-awesome'
 	import { exclamationCircle } from 'svelte-awesome/icons'
-	export let error = ''
+	/**
+	 * @typedef {Object} Props
+	 * @property {string} [error]
+	 */
+
+	/** @type {Props} */
+	let { error = '' } = $props();
 </script>
 
 <style>

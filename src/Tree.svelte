@@ -1,17 +1,20 @@
 <script>
+	import Tree from './Tree.svelte';
 	import Directory from './Directory.svelte'
 	import File from './File.svelte'
 	import Loading from './Loading.svelte'
 	import Error from './Error.svelte'
 	import { DIRECTORY, FILE } from './types.js'
 
-	export let files = []
-	export let icons
-	export let expanded
-	export let selected
+	let {
+		files = [],
+		icons,
+		expanded,
+		selected
+	} = $props();
 
-	const loaders = {}
-	const opened = {}
+	const loaders = $state({})
+	const opened = $state({})
 
 	const open = index => {
 		if (typeof files[index].children === 'function') {
@@ -68,7 +71,7 @@
 							</li>
 						</ul>
 					{:then files}
-						<svelte:self
+						<Tree
 							{ expanded }
 							{ files }
 							{ icons }

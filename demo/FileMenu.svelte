@@ -1,10 +1,12 @@
 <script>
 	import FileExplorer from '../src/FileExplorer.svelte'
 
-	export let files
-	export let icons
-	export let expanded
-	export let selected
+	let {
+		files,
+		icons,
+		expanded,
+		selected
+	} = $props();
 </script>
 
 <FileExplorer

@@ -1,12 +1,21 @@
 <script>
+	import { createBubbler } from 'svelte/legacy';
+
+	const bubble = createBubbler();
 	import Icon from 'svelte-awesome'
 	import { file } from 'svelte-awesome/icons'
 
-	export let name = ''
-	export let selected = false
-	export let icons
+	/**
+	 * @typedef {Object} Props
+	 * @property {string} [name]
+	 * @property {boolean} [selected]
+	 * @property {any} icons
+	 */
 
-	$: extension = name && name.split('.').pop()
+	/** @type {Props} */
+	let { name = '', selected = false, icons } = $props();
+
+	let extension = $derived(name && name.split('.').pop())
 </script>
 
 <style>
@@ -19,7 +28,7 @@
 </style>
 
 <div>
-	<button class:selected on:click>
+	<button class:selected onclick={bubble('click')}>
 		<Icon data={ icons && icons(extension) || file } />
 		{ name }
 	</button>
