@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saibotsivad/svelte-file-tree-explorer.git"
+    "url": "git+https://github.com/paulhovey/svelte-file-tree-explorer.git"
   },
   "keywords": [
     "svelte"
@@ -37,12 +37,12 @@
       "svelte": "./src/index.js"
     }
   },
-  "author": "Tobias Davis <tobias@davistobias.com>",
+  "author": "Tobias Davis <tobias@davistobias.com>, Paul Hovey <paul@paulhovey.org>",
   "license": "VOL",
   "bugs": {
-    "url": "https://github.com/saibotsivad/svelte-file-tree-explorer/issues"
+    "url": "https://github.com/paulhovey/svelte-file-tree-explorer/issues"
   },
-  "homepage": "https://github.com/saibotsivad/svelte-file-tree-explorer#readme",
+  "homepage": "https://github.com/paulhovey/svelte-file-tree-explorer#readme",
   "dependencies": {
     "@rollup/plugin-commonjs": "^18.0.0",
     "@rollup/plugin-node-resolve": "^11.2.1",

@@ -40,6 +40,13 @@
 		height: 1rem;
 	}
 
+	button.svelte-1h4glgr:hover {
+		background-color: lightgray;
+	}
+	div.svelte-1h4glgr {
+		padding-left: 1rem;
+	}
+
 	div.svelte-1g2w5wt {
 		padding: 0.2rem;
 		margin-left: 0.5rem;
@@ -63,13 +70,6 @@
 		left: 0;
 		top: -0.2rem;
 		color: red;
-	}
-
-	button.svelte-1h4glgr:hover {
-		background-color: lightgray;
-	}
-	div.svelte-1h4glgr {
-		padding-left: 1rem;
 	}
 
   .fa-icon.svelte-1mc5hvj {
