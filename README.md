@@ -5,7 +5,7 @@ A file tree explorer for the web, built with Svelte.
 Install it like this:
 
 ```bash
-npm install @saibotsivad/svelte-file-tree-explorer
+npm install paulhovey/svelte-file-tree-explorer
 ```
 
 Use it something like this:
