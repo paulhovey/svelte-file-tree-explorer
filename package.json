@@ -1,6 +1,6 @@
 {
   "name": "svelte-file-tree-explorer",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "File tree explorer built with Svelte.",
   "scripts": {
     "build": "rollup -c",
@@ -14,6 +14,29 @@
   "keywords": [
     "svelte"
   ],
+  "files": [
+    "src",
+    "dist"
+  ],
+  "type": "module",
+  "svelte": "./src/index.js",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    "./*.svelte": {
+      "types": "./src/*.svelte.d.ts",
+      "import": "./src/*.svelte"
+    },
+    "./*.js": {
+      "types": "./src/*.d.ts",
+      "import": "./src/*.js"
+    },
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js",
+      "svelte": "./src/index.js"
+    }
+  },
   "author": "Tobias Davis <tobias@davistobias.com>",
   "license": "VOL",
   "bugs": {

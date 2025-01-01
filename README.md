@@ -12,7 +12,7 @@ Use it something like this:
 
 ```html
 <script>
-	import Explorer from '@saibotsivad/svelte-file-tree-explorer'
+	import Explorer from 'paulhovey/svelte-file-tree-explorer'
 	const fileTree = [
 		// file tree
 	]
